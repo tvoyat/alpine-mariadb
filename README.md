@@ -4,8 +4,8 @@ Une image docker de MariaDB basée sur alpine linux
 
 # build image
 ```bash
-docker build -t tvoyat/alpine-mariadb .
-docker run -it --rm -v $(pwd):/var/lib/mysql -p 3306:3306 tvoyat/alpine-mariadb
+docker build -t voyat/alpine-mariadb .
+docker run -it --rm -v $(pwd):/var/lib/mysql -p 3306:3306 voyat/alpine-mariadb
 ```
 
 # Usage
@@ -13,7 +13,7 @@ docker run -it --rm -v $(pwd):/var/lib/mysql -p 3306:3306 tvoyat/alpine-mariadb
 Par défaut, le mot de passe 'root' de mariadb est 'mariadb' et aucune base n'est présente.
 
 ```bash
-docker run -d --name mariadb -p 3306:3306 tvoyat/alpine-mariadb
+docker run -d --name mariadb -p 3306:3306 voyat/alpine-mariadb
 ```
 
 
@@ -23,5 +23,5 @@ Avec un volume local, un mot de passe différent et création d'une base :
 docker run -d --name mariadb -p 3306:3306 \
     -v $(pwd)/data:/var/lib/mysql \
     -e DATABASE=base -e USER=pfrate -e PASSWORD=password \
-    -e ROOT_PASSWORD=monpassword tvoyat/alpine-mariadb
+    -e ROOT_PASSWORD=monpassword voyat/alpine-mariadb
 ```
