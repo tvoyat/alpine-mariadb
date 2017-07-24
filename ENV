@@ -1,0 +1,8 @@
+
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+[ -f $DIR/../ENV ] && source $DIR/../ENV
+
+# PORT="-p 14080:80"
+# SYSLOG="--log-driver=syslog --log-opt tag=docker/{{.Name}}"
+
+# RUN="docker run -idt $PORT $SYSLOG --restart unless-stopped --name auto tvoyat/autoconfig"
